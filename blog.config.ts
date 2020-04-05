@@ -1,7 +1,7 @@
 /*
  * @Author: ndzy
  * @Date: 2020-04-05 07:11:13
- * @LastEditTime: 2020-04-05 08:29:12
+ * @LastEditTime: 2020-04-05 14:13:47
  * @LastEditors: ndzy
  */
 import { IBlogConfig } from '@/types'
@@ -14,4 +14,5 @@ const config: IBlogConfig = {
   jwtSecret: 'myblogjsonwebtokensecretkey',
 }
 
-export default config
+export default config;
+

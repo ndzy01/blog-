@@ -1,25 +1,25 @@
+<!--
+ * @Author: ndzy
+ * @Date: 2020-04-05 14:07:18
+ * @LastEditTime: 2020-04-05 14:07:25
+ * @LastEditors: ndzy
+ -->
 <template>
   <div class="layout-footer">
-    {{ year }} © Powered by
-    <a
-      href="https://github.com/eshengsky/iBlog"
-      target="_blank"
-    >iBlog</a>
+    {{ year }} © Powered by ndzy
     <span v-if="settings.recordInfo" class="record-info">
       |
       <a href="http://www.beian.miit.gov.cn">{{ settings.recordInfo }}</a>
     </span>
     <span v-if="showLogin" class="admin-link">
       |
-      <nuxt-link to="/admin">
-        后台管理
-      </nuxt-link>
+      <nuxt-link to="/admin">后台管理</nuxt-link>
     </span>
   </div>
 </template>
 
 <script lang="ts">
-import Vue, { PropOptions } from 'vue';
+import Vue, { PropOptions } from 'vue'
 export default Vue.extend({
   props: {
     showLogin: {
@@ -27,13 +27,13 @@ export default Vue.extend({
       default: false
     } as PropOptions<boolean>
   },
-  data () {
+  data() {
     return {
       year: new Date().getFullYear(),
       settings: this.$store.state.settings
-    };
+    }
   }
-});
+})
 </script>
 
 <style scoped>
